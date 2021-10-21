@@ -24,6 +24,7 @@ public class HerokuAppTyposTest {
         for (WebElement checkText : text) {
             Assert.assertEquals(checkText.getText(),
                     "Sometimes you'll see a typo, other times you won't.");
+            driver.quit();
         }
     }
 }
