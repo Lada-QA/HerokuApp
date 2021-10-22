@@ -19,11 +19,11 @@ public class HerokuElementsTest {
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
-        WebElement addElement = driver.findElement(By.xpath("//*[@onclick='addElement()']"));
-        addElement.click();
-        addElement.click();
-        addElement.findElement(By.xpath("//*[@onclick='deleteElement()']")).click();
-        int count = addElement.findElements(By.xpath("//*[@onclick='deleteElement()']")).size();
+        WebElement addElementButton = driver.findElement(By.xpath("//*[@onclick='addElement()']"));
+        addElementButton.click();
+        addElementButton.click();
+        addElementButton.findElement(By.xpath("//*[@onclick='deleteElement()']")).click();
+        int count = addElementButton.findElements(By.xpath("//*[@onclick='deleteElement()']")).size();
         Assert.assertEquals(count, 1);
         driver.quit();
     }
