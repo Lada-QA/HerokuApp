@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.util.List;
 
 public class HerokuAppTyposTest {
 
@@ -20,11 +19,10 @@ public class HerokuAppTyposTest {
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/typos");
-        List<WebElement> text = driver.findElements(By.cssSelector("#content > div > p:nth-child(3)"));
-        for (WebElement checkText : text) {
-            Assert.assertEquals(checkText.getText(),
+        WebElement text = driver.findElement(By.cssSelector("#content > div > p:nth-child(3)"));
+                   Assert.assertEquals(text.getText(),
                     "Sometimes you'll see a typo, other times you won't.");
             driver.quit();
         }
     }
-}
+
