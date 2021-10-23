@@ -20,9 +20,9 @@ public class HerokuAppTyposTest {
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/typos");
         WebElement text = driver.findElement(By.cssSelector("#content > div > p:nth-child(3)"));
-                   Assert.assertEquals(text.getText(),
-                    "Sometimes you'll see a typo, other times you won't.");
-            driver.quit();
-        }
+        Assert.assertEquals(text.getText(),
+                "Sometimes you'll see a typo, other times you won't.");
+        driver.quit();
     }
+}
 
