@@ -15,10 +15,11 @@ public class BasePage {
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
+    public static final String BASE_URL = "http://the-internet.herokuapp.com";
 
     public void openPage(String url) {
         driver.get(url);
-        waitForContextLoaded();
+        waitForPageIsLoaded();
         actions = new Actions(driver);
     }
 
@@ -27,7 +28,7 @@ public class BasePage {
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
-    public void waitForContextLoaded() {
+    public void waitForPageIsLoaded() {
         new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
                 return ((JavascriptExecutor) driver).executeScript("return document.context_menu").

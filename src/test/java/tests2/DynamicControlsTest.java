@@ -7,7 +7,7 @@ public class DynamicControlsTest extends BaseTest {
     @Test
     public void controlCheckboxForDynamics() {
         contextMenuPage.openPage("http://the-internet.herokuapp.com/dynamic_controls");
-        dynamicControlsPage.setFindCheckbox();
+        dynamicControlsPage.setCheckbox();
         dynamicControlsPage.setClickButtonRemove();
         Assert.assertTrue(dynamicControlsPage.isCheckboxDisplayed() < 1);
     }

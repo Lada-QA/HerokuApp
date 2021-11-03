@@ -7,7 +7,7 @@ public class FileUploadTest extends BaseTest {
     @Test
     public void setFileUpload() {
         contextMenuPage.openPage("http://the-internet.herokuapp.com/upload");
-        fileUploadPage.setFileUpload();
-        Assert.assertEquals(fileUploadPage.checkDocumentOnPage(), "Допсоглашение 2-3279 Белстройсвязьдеталь плюс(1).docx");
+        fileUploadPage.uploadFileFromFolder();
+        Assert.assertEquals(fileUploadPage.getUploadedFileText(), "Допсоглашение 2-3279 Белстройсвязьдеталь плюс(1).docx");
     }
 }

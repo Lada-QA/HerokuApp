@@ -10,19 +10,24 @@ public class ContextMenuPage extends BasePage {
         super(driver);
     }
 
-    private static final By RIGHT_CLICK_ON_ELEMENT = By.cssSelector("#hot-spot");
+    private static final By ELEMENT = By.cssSelector("#hot-spot");
+    private static final By TEXT = By.xpath("//p[contains(text(),'Context menu items are custom ')]");
 
-    public void setRightClickOnElement() {
-        WebElement link = driver.findElement(RIGHT_CLICK_ON_ELEMENT);
+    public void rightClickOnElement() {
+        WebElement link = driver.findElement(ELEMENT);
         actions.contextClick(link).perform();
     }
 
     public String getErrorValidationText() {
-        waitForContextLoaded();
+        waitForPageIsLoaded();
         return driver.switchTo().alert().getText();
     }
 
     public void closeContextMenu() {
         driver.switchTo().alert().accept();
+    }
+
+    public String getTextFromPage() {
+     return driver.findElement(TEXT).getText();
     }
 }
