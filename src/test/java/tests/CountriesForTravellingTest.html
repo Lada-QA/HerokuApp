@@ -1,0 +1,136 @@
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  font-size: 120%;
+  }
+  img {
+  width: 195;
+  height: 155;
+  }
+  h1 {
+  color:DarkRed;
+}
+select {
+color: Green;
+width: 20%;
+height: 5%
+}
+p {
+color:DarkBlue;
+font-size: 155%;
+}
+
+
+
+
+
+</style>
+<body>
+<meta charset="UTF-8">
+<h1><b>Here are 7 wonders of the world</b></h1>
+<p>The countries with tourists destinations and tours</p>
+<div class="checkselect">
+    <label for="tours">Choose a country</label>
+    <select name="tours" id="tours" onchange="if (this.value) window.location.href = this.value">
+        <option value="https://www.tripadvisor.com/Attractions-g294202-Activities-c42-Giza_Giza_Governorate.html">
+            Giza
+        </option>
+        <option value="https://www.tripadvisor.com/Attractions-g47266-Activities-c42-Babylon_Long_Island_New_York.html">
+            Babylon
+        </option>
+        <option value="https://www.tripadvisor.ru/Hotel_Review-g2613169-d3215156-Reviews-Olympia_Touristic_Village-Radhime_Vlore_Vlore_County.html">
+            Olympia
+        </option>
+        <option value="https://www.tripadvisor.ru/Attraction_Review-g297972-d2085210-Reviews-Ephesus_Tours-Kusadasi_Turkish_Aegean_Coast.html">
+            Ephesus
+        </option>
+        <option value="https://www.tripadvisor.com/AttractionToursAndTickets-g298658-d2177923-Mausoleum_of_Halicarnassus-Bodrum_City_Bodrum_District_Mugla_Province_Turkish_Aeg.html">
+            Halicarnassus
+        </option>
+        <option value="https://www.tripadvisor.com/Attractions-g189449-Activities-c42-Rhodes_Dodecanese_South_Aegean.html">
+            Rhodes
+        </option>
+        <option value="https://www.tripadvisor.com/Attractions-g295398-Activities-c42-Alexandria_Alexandria_Governorate.html">
+            Alexandria
+        </option>
+    </select>
+    <p id="gsearch">You can find information</p>
+    <form action="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1GCEA_enBY954BY954&oq=go&aqs=chrome.1.69i57j46i131i199i433i465i512j0i131i433i512j0i433i512l2j69i60l3.3417j0j7&sourceid=chrome&ie=UTF-8">
+        <label for="gsearch">Search Google:</label>
+        <input type="gsearch" name="gsearch">
+        <input type="submit" value="Search">
+    </form>
+</div>
+<table style="width:100%;">
+    <tr>
+        <th>Country</th>
+        <th>City</th>
+        <th>Attraction</th>
+    </tr>
+    <tr>
+        <td><b>Giza</b></td>
+        <td>Egypt</td>
+        <td><img src="https://planetofhotels.com/sites/default/files/attracrions/piramida-heopsa-15.jpg"
+        ><a href="https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza">The Pyramid of Cheops</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Babylon</b></td>
+        <td>Iraq</td>
+        <td><img
+                src="https://www.mostfamouslist.com/wp-content/uploads/2016/02/The-Hanging-gardens-of-Babylon-were-built-by-King-Nebuchadnezzar.jpg"
+        ><a href="https://en.wikipedia.org/wiki/Hanging_Gardens_of_Babylon">
+            Hanging Gardens of Babylon</a>
+        </td>
+    </tr>
+    <tr>
+
+        <td><b>Olympia</b></td>
+        <td>Greece</td>
+        <td><img src="https://avatars.mds.yandex.net/i?id=a348e9c9a52bc4fce7e416c73336a363-4306623-images-thumbs&n=13"
+        ><a href="https://en.wikipedia.org/wiki/Statue_of_Zeus_at_Olympia">Zeus statue in Olympia</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Ephesus</b></td>
+        <td>Turkey</td>
+        <td><img src="https://i.pinimg.com/originals/10/e7/a4/10e7a4f7dd22c78ec3e0fee1256df2da.jpg"
+        ><a href="https://en.wikipedia.org/wiki/Temple_of_Artemis">Temple of Artemis at Ephesus</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Halicarnassus</b></td>
+        <td>Turkey</td>
+        <td><img src="https://ezdili-znaem.com/wp-content/uploads/2021/03/bodrum-09.jpg"
+        ><a href="https://en.wikipedia.org/wiki/Mausoleum_at_Halicarnassus">Mausoleum in Halicarnassus
+        </a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Rhodes</b></td>
+        <td>Greece</td>
+        <td><img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/234b114f-2ed1-42cf-87cd-f56cf38feddc/d4qcdti-061c00f1-7f1e-495f-aeb8-7c06317ac4f0.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8yMzRiMTE0Zi0yZWQxLTQyY2YtODdjZC1mNTZjZjM4ZmVkZGMvZDRxY2R0aS0wNjFjMDBmMS03ZjFlLTQ5NWYtYWViOC03YzA2MzE3YWM0ZjAuanBnIn1dXX0.djKLhyQY7kUVCOQdySNuUXHz8S359nte1qUrF6yzmLE"
+        ><a href="https://en.wikipedia.org/wiki/Temple_of_Artemis">The Colossus of Rhodes</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Alexandria</b></td>
+        <td>Egypt</td>
+        <td><img src="https://www.orangesmile.com/extreme/img/main/alexandria-lighthouse_1.jpg"
+        ><a href="https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria">Lighthouse of Alexandria</a>
+        </td>
+    <tr/>
+</table>
+<h3>Mark the countries you like</h3>
+<input type="checkbox" id="egypt" name="Egypt" value="country">
+<label for="egypt">I love Egypt</label><br>
+<input type="checkbox" id="iraq" name="Iraq" value="country">
+<label for="iraq">I love Iraq</label><br>
+<input type="checkbox" id="greece" name="Greece" value="country">
+<label for="greece">I love Greece</label><br>
+<input type="checkbox" id="turkey" name="Turkey" value="country">
+<label for="turkey">I love Turkey</label><br>
+</body>
+</html>
