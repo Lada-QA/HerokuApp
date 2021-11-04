@@ -15,14 +15,14 @@ public class DynamicControlsTest extends BaseTest {
     @Test
     public void controlInputDisable() {
         contextMenuPage.openPage("http://the-internet.herokuapp.com/dynamic_controls");
-        Assert.assertFalse(dynamicControlsPage.isInputDisableEnable());
+        Assert.assertFalse(dynamicControlsPage.isInputEnable());
     }
 
     @Test
     public void controlInputEnable() {
         contextMenuPage.openPage("http://the-internet.herokuapp.com/dynamic_controls");
         dynamicControlsPage.setClickButtonEnable();
-        Assert.assertTrue(dynamicControlsPage.isInputDisableEnable());
+        Assert.assertTrue(dynamicControlsPage.isInputEnable());
 
     }
 }

@@ -13,8 +13,8 @@ public class FileUploadPage extends BasePage {
     private static final By BUTTON_UPLOAD = By.xpath("//input[@class='button']");
     private static final By DOCUMENT = By.xpath("//div[@id='uploaded-files']");
 
-    public void  uploadFileFromFolder() {
-        driver.findElement(FILE_UPLOAD).sendKeys("C:\\Users\\100nout.by\\Downloads\\Допсоглашение 2-3279 Белстройсвязьдеталь плюс(1).docx");
+    public void  uploadFileFromFolder(String fileName) {
+        driver.findElement(FILE_UPLOAD).sendKeys(fileName);
         driver.findElement(BUTTON_UPLOAD).click();
     }
 

@@ -29,7 +29,7 @@ public class DynamicControlsPage extends BasePage {
         return driver.findElements(CHECKBOX).size();
     }
 
-    public boolean isInputDisableEnable() {
+    public boolean isInputEnable() {
         return driver.findElement(INPUT).isEnabled();
     }
 

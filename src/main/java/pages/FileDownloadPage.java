@@ -19,12 +19,12 @@ public class FileDownloadPage extends BasePage {
         driver.get(DOWNLOAD_FILES_URL);
     }
 
-    public List<WebElement> downloadFile() {
+    public List<WebElement> getDownloadFilesList() {
         return driver.findElements(By.xpath("//*[@class='example']/a"));
     }
 
     public void downloadElementByIndex(int index) {
-        downloadFile().get(index).click();
+        getDownloadFilesList().get(index).click();
         try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {
